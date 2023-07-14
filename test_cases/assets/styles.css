@@ -1,0 +1,12 @@
+.toggle-button {
+  font-size: 15px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid gray;
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
