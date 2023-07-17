@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Expandable Tables</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    table td {
+      border: 1px solid black;
+      padding: 5px;
+      text-align: center;
+    }
+    .inner-table {
+      display: none;
+      margin-top: 10px;
+    }
+    .expanded {
+      display: table;
+    }
+  </style>
+  <script>
+    function toggleTable1() {
+      var innerTable1 = document.getElementById("inner-table-1");
+      innerTable1.classList.toggle("expanded");
+    }
+
+    function toggleTable2() {
+      var innerTable2 = document.getElementById("inner-table-2");
+      innerTable2.classList.toggle("expanded");
+    }
+  </script>
+</head>
+<body>
+  <table id="outer-table">
+    <tr>
+      <td> <button onclick="toggleTable1()">Toggle Table 1</button></td>
+      <td>Outer Table Cell 2</td>
+      <td>Outer Table Cell 3</td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <table id="inner-table-1" class="inner-table">
+          <tr>
+            <td>Inner Table Cell 1</td>
+            <td>Inner Table Cell 2</td>
+            <td>Inner Table Cell 3</td>
+          </tr>
+          <tr>
+            <td>Inner Table Cell 4</td>
+            <td>Inner Table Cell 5</td>
+            <td>Inner Table Cell 6</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  
+    <tr>
+      <td>  <button onclick="toggleTable2()">Toggle Table 2</button></td>
+      <td>Outer Table Cell 5</td>
+      <td>Outer Table Cell 6</td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <table id="inner-table-2" class="inner-table">
+          <tr>
+            <td>Inner Table Cell 7</td>
+            <td>Inner Table Cell 8</td>
+            <td>Inner Table Cell 9</td>
+          </tr>
+          <tr>
+            <td>Inner Table Cell 10</td>
+            <td>Inner Table Cell 11</td>
+            <td>Inner Table Cell 12</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
